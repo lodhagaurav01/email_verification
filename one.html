@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email verification</title>
+
+    <style>
+    .centre_block{
+        text-align: center;
+        background-color: bisque;
+     
+
+    }
+    .centre_block h4{
+        color: red;
+    }
+
+    input[type=text]:hover{
+       box-shadow: 10px 10px 10px 10px pink;
+       
+    }
+
+    </style>
+
+<script>
+	function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid email address!");
+}
+else
+{
+alert("You have entered an invalid email address!");
+}
+}
+
+</script>
+
+</head>
+<body>
+    <div class="centre_block">
+    <h4>Write a JavaScript code to Validate email address entered in a
+        HTML textfield.</h4><br><br>
+    <h1>Email verification</h1><br><br>
+  <form name="myinput">
+    <input type="text" placeholder="check_email" name="emaill"><br><br><br>
+    <input type="submit" onclick="ValidateEmail(document.myinput.emaill)">
+</form>
+</div>
+</body>
+</html>
